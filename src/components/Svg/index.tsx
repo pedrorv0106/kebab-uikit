@@ -5,6 +5,7 @@ export { default as ArrowDropUpIcon } from "./Icons/ArrowDropUp";
 export { default as ArrowForwardIcon } from "./Icons/ArrowForward";
 export { default as BinanceIcon } from "./Icons/Binance";
 export { default as BlockIcon } from "./Icons/Block";
+export { default as BurnIcon } from "./Icons/Burn";
 export { default as CardViewIcon } from "./Icons/CardView";
 export { default as CheckmarkIcon } from "./Icons/Checkmark";
 export { default as CheckmarkCircleIcon } from "./Icons/CheckmarkCircle";
