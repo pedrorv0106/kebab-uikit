@@ -37,7 +37,7 @@ export type HeaderType<T extends DataType> = {
   render: () => React.ReactNode;
 };
 
-export type DataType = { [key: string]: string };
+export type DataType = { [key: string]: any };
 
 export type ColumnByNamesType<T extends DataType> = {
   [key: string]: ColumnType<T>;
@@ -90,6 +90,7 @@ export interface UseTableOptionsType<T extends DataType> {
   sortable?: boolean;
   selectable?: boolean;
   pagination?: boolean;
+  sortColumn?: string;
   filter?: (row: RowType<T>[]) => RowType<T>[];
 }
 

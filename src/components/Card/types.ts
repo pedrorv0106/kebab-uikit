@@ -12,6 +12,7 @@ export type CardTheme = {
   boxShadowActive: string;
   boxShadowSuccess: string;
   boxShadowWarning: string;
+  dropShadow: string;
 };
 
 export interface CardProps extends SpaceProps {
