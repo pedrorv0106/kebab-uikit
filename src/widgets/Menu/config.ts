@@ -5,15 +5,9 @@ export const links = [
     href: "/",
   },
   {
-    label: "Profile",
-    icon: "ProfileIcon",
-    items: [
-      {
-        label: "Dashboard",
-        href: "/dashboard",
-      },
-    ],
-    href: "/farms",
+    label: "Dashboard",
+    icon: "DashboardIcon",
+    href: "/dashboard",
   },
   {
     label: "Trade",

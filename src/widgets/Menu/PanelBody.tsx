@@ -44,11 +44,24 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               initialOpenState={entry.initialOpenState}
             >
               {isPushed &&
-                entry.items.map((item) => (
-                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                    <MenuLink href={item.href}>{item.label}</MenuLink>
-                  </MenuEntry>
-                ))}
+                entry.items.map((item) => {
+                  if (item.icon) {
+                    const SubEntryIcon = Icons[item.icon];
+                    const subEntryIconElement = <SubEntryIcon width="24px" mr="8px" />;
+                    return (
+                      <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                        {subEntryIconElement}
+                        <MenuLink href={item.href}>{item.label}</MenuLink>
+                      </MenuEntry>
+                    )
+                  } else {
+                    return (
+                      <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                        <MenuLink href={item.href}>{item.label}</MenuLink>
+                      </MenuEntry>
+                    )
+                  }
+                })}
             </Accordion>
           );
         }
