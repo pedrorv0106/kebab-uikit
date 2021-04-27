@@ -28,7 +28,7 @@ export const Connected: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
-        priceUp={true}
+        priceUp
         links={links}
       >
         <div>
