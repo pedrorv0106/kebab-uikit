@@ -18,7 +18,6 @@ export interface NavTheme {
 export interface MenuSubEntry {
   label: string;
   href: string;
-  icon?: string;
 }
 
 export interface MenuEntry {
