@@ -43,7 +43,7 @@ const SettingsEntry = styled.div`
   align-items: center;
   justify-content: space-between;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 8px;
+  padding: 0 16px;
 `;
 
 const SocialEntry = styled.div`
@@ -84,51 +84,18 @@ const PanelFooter: React.FC<Props> = ({
             target="_blank"
           >
             {priceUp ? <PancakeRoundGreenIcon width="24px" mr="8px" /> : <PancakeRoundIcon width="24px" mr="8px" />}
-            <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+            <Text color="footer" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
           </PriceLink>
         ) : (
           <Skeleton width={80} height={24} />
         )}
-        <Flex>
-          {socials.map((social, index) => {
-            const Icon = Icons[social.icon];
-            const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
-            const mr = index < socials.length - 1 ? "24px" : 0;
-            if (social.items) {
-              return (
-                <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
-                  {social.items.map((item) => (
-                    <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
-                      {item.label}
-                    </Link>
-                  ))}
-                </Dropdown>
-              );
-            }
-            return (
-              <Link external key={social.label} href={social.href} aria-label={social.label} mr={mr}>
-                <Icon {...iconProps} />
-              </Link>
-            );
-          })}
-        </Flex>
-      </SocialEntry>
-      <SettingsEntry>
-        <Button variant="text" onClick={() => toggleTheme(!isDark)}>
-          {/* alignItems center is a Safari fix */}
-          <Flex alignItems="center">
-            <SunIcon color={isDark ? "textDisabled" : "text"} width="24px" />
-            <Text color="textDisabled" mx="4px">
-              /
-            </Text>
-            <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
-          </Flex>
-        </Button>
         <Dropdown
           position="top-right"
           target={
-            <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
-              <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
+            <Button variant="text" startIcon={<LanguageIcon color="footer" width="24px" />}>
+              <Text color="footer" bold>
+                {currentLang?.toUpperCase()}
+              </Text>
             </Button>
           }
         >
@@ -144,6 +111,41 @@ const PanelFooter: React.FC<Props> = ({
             </MenuButton>
           ))}
         </Dropdown>
+      </SocialEntry>
+      <SettingsEntry>
+        <Flex>
+          {socials.map((social, index) => {
+            const Icon = Icons[social.icon];
+            const iconProps = { width: "24px", color: "footer", style: { cursor: "pointer" } };
+            const mr = index < socials.length - 1 ? "24px" : 0;
+            if (social.items) {
+              return (
+                <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
+                  {social.items.map((item) => (
+                    <Link external key={item.label} href={item.href} aria-label={item.label} color="footer">
+                      {item.label}
+                    </Link>
+                  ))}
+                </Dropdown>
+              );
+            }
+            return (
+              <Link external key={social.label} href={social.href} aria-label={social.label} mr={mr}>
+                <Icon {...iconProps} />
+              </Link>
+            );
+          })}
+        </Flex>
+        <Button variant="text" onClick={() => toggleTheme(!isDark)}>
+          {/* alignItems center is a Safari fix */}
+          <Flex alignItems="center">
+            <SunIcon color="text" width="24px" />
+            <Text color="footer" mx="4px">
+              /
+            </Text>
+            <MoonIcon color="primary" width="24px" />
+          </Flex>
+        </Button>
       </SettingsEntry>
     </Container>
   );

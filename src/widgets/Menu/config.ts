@@ -3,11 +3,15 @@ export const links = [
     label: "Home",
     icon: "HomeIcon",
     href: "/",
+    color: "#E46149",
+    backgroundColor: "#FAE0DC",
   },
   {
     label: "Dashboard",
     icon: "DashboardIcon",
     href: "/dashboard",
+    color: "#404040",
+    backgroundColor: "#D9D9D9",
   },
   {
     label: "Trade",
@@ -22,16 +26,22 @@ export const links = [
         href: "https://swap.kebabfinance.com/#/pool",
       },
     ],
+    color: "#197BBD",
+    backgroundColor: "#D1E5F2",
   },
   {
     label: "Farms",
     icon: "FarmIcon",
     href: "/farms",
+    color: "#11A373",
+    backgroundColor: "#CFEDE3",
   },
   {
     label: "Pools",
     icon: "PoolIcon",
     href: "/syrup",
+    color: "#F7931A",
+    backgroundColor: "#FDE9D1",
   },
   {
     label: "Info",
@@ -54,6 +64,8 @@ export const links = [
         href: "https://info.kebabfinance.com/#/accounts",
       },
     ],
+    color: "#BC1FAA",
+    backgroundColor: "#F2D2EE",
   },
   {
     label: "More",
@@ -76,6 +88,8 @@ export const links = [
         href: "https://kebabfinance1.medium.com/",
       },
     ],
+    color: "#DCAB2F",
+    backgroundColor: "#F8EED5",
   },
 ];
 

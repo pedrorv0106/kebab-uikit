@@ -21,6 +21,8 @@ export interface MenuSubEntry {
 }
 
 export interface MenuEntry {
+  color?: string;
+  backgroundColor?: string;
   label: string;
   icon: string;
   items?: MenuSubEntry[];

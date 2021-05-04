@@ -1,3 +1,5 @@
+/* eslint @typescript-eslint/no-explicit-any: "off" */
+
 export type ColumnType<T extends DataType> = {
   id: number;
   name: string;
