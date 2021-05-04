@@ -1,3 +1,5 @@
+/* eslint jsx-a11y/anchor-is-valid: "off" */
+
 import React, { useState } from "react";
 import styled from "styled-components";
 import { MENU_ENTRY_HEIGHT } from "./config";
@@ -9,14 +11,10 @@ interface Props extends PushedProps {
   label: string;
   icon: React.ReactElement;
   initialOpenState?: boolean;
+  isActive?: boolean;
+  color?: string;
+  backgroundColor?: string;
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  // Safari fix
-  flex-shrink: 0;
-`;
 
 const AccordionContent = styled.div<{ isOpen: boolean; isPushed: boolean; maxHeight: number }>`
   max-height: ${({ isOpen, maxHeight }) => (isOpen ? `${maxHeight}px` : 0)};
@@ -27,7 +25,17 @@ const AccordionContent = styled.div<{ isOpen: boolean; isPushed: boolean; maxHei
   border-width: 1px;
 `;
 
-const Accordion: React.FC<Props> = ({ label, icon, isPushed, pushNav, initialOpenState = false, children }) => {
+const Accordion: React.FC<Props> = ({
+  label,
+  icon,
+  isPushed,
+  pushNav,
+  initialOpenState = false,
+  children,
+  isActive,
+  color,
+  backgroundColor,
+}) => {
   const [isOpen, setIsOpen] = useState(initialOpenState);
 
   const handleClick = () => {
@@ -40,11 +48,21 @@ const Accordion: React.FC<Props> = ({ label, icon, isPushed, pushNav, initialOpe
   };
 
   return (
-    <Container>
-      <MenuEntry onClick={handleClick}>
-        {icon}
-        <LinkLabel isPushed={isPushed}>{label}</LinkLabel>
-        {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+    <>
+      <MenuEntry
+        isActive={isActive}
+        isPushed={isPushed}
+        color={color}
+        backgroundColor={backgroundColor}
+        onClick={handleClick}
+      >
+        <a>
+          {icon}
+          <LinkLabel isActive={isActive} isPushed={isPushed} color={color}>
+            {label}
+          </LinkLabel>
+          {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+        </a>
       </MenuEntry>
       <AccordionContent
         isOpen={isOpen}
@@ -53,7 +71,7 @@ const Accordion: React.FC<Props> = ({ label, icon, isPushed, pushNav, initialOpe
       >
         {children}
       </AccordionContent>
-    </Container>
+    </>
   );
 };
 

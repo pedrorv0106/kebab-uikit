@@ -1,4 +1,10 @@
+/* eslint @typescript-eslint/no-var-requires: "off" */
+
 import { createGlobalStyle } from "styled-components";
+
+const GilroyRegular = require("./fonts/Gilroy-Regular.ttf");
+const GilroyMedium = require("./fonts/Gilroy-Medium.ttf");
+const GilroySemiBold = require("./fonts/Gilroy-SemiBold.ttf");
 
 const ResetCSS = createGlobalStyle`
   /* prettier-ignore */
@@ -63,8 +69,20 @@ const ResetCSS = createGlobalStyle`
   *::after {
     box-sizing: border-box;
   }
+  @font-face {
+    font-family: 'GilroyRegular';
+    src: url(${GilroyRegular});
+  }
+  @font-face {
+    font-family: 'GilroyMedium';
+    src: url(${GilroyMedium});
+  }
+  @font-face {
+    font-family: 'GilroySemiBold';
+    src: url(${GilroySemiBold});
+  }
   * {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'GilroyRegular', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

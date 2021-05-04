@@ -34,42 +34,51 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
         if (entry.items) {
+          const itemLinks = entry.items.map((item) => item.href);
           return (
             <Accordion
               key={entry.label}
               isPushed={isPushed}
+              isActive={itemLinks.includes(location.pathname)}
               pushNav={pushNav}
               icon={iconElement}
               label={entry.label}
               initialOpenState={entry.initialOpenState}
+              color={entry.color}
+              backgroundColor={entry.backgroundColor}
             >
               {isPushed &&
-                entry.items.map((item) => {
-                  if (item.icon) {
-                    const SubEntryIcon = Icons[item.icon];
-                    const subEntryIconElement = <SubEntryIcon width="24px" mr="8px" />;
-                    return (
-                      <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                        {subEntryIconElement}
-                        <MenuLink href={item.href}>{item.label}</MenuLink>
-                      </MenuEntry>
-                    )
-                  } else {
-                    return (
-                      <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                        <MenuLink href={item.href}>{item.label}</MenuLink>
-                      </MenuEntry>
-                    )
-                  }
-                })}
+                entry.items.map((item) => (
+                  <MenuEntry
+                    key={item.href}
+                    isActive={item.href === location.pathname}
+                    isPushed={isPushed}
+                    color={entry.color}
+                    backgroundColor={entry.backgroundColor}
+                    secondary
+                    onClick={handleClick}
+                  >
+                    <MenuLink href={item.href} style={{ fontFamily: "GilroyMedium" }}>
+                      {item.label}
+                    </MenuLink>
+                  </MenuEntry>
+                ))}
             </Accordion>
           );
         }
         return (
-          <MenuEntry key={entry.label} isActive={entry.href === location.pathname}>
+          <MenuEntry
+            key={entry.label}
+            isActive={entry.href === location.pathname}
+            isPushed={isPushed}
+            color={entry.color}
+            backgroundColor={entry.backgroundColor}
+          >
             <MenuLink href={entry.href} onClick={handleClick}>
               {iconElement}
-              <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
+              <LinkLabel isActive={entry.href === location.pathname} isPushed={isPushed} color={entry.color}>
+                {entry.label}
+              </LinkLabel>
             </MenuLink>
           </MenuEntry>
         );

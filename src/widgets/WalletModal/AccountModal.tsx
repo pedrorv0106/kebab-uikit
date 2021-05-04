@@ -3,7 +3,7 @@ import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import Link from "../../components/Link/Link";
 import Flex from "../../components/Flex/Flex";
-import { OpenNewIcon } from "../../components/Svg";
+import { OpenNewIcon, LogoutIcon } from "../../components/Svg";
 import { Modal } from "../Modal";
 import { localStorageKey } from "./config";
 
@@ -23,7 +23,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
       {account}
     </Text>
     <Link
-      fontSize="14px"
+      fontSize="16px"
       href={`https://bscscan.com/address/${account}`}
       target="blank"
       rel="noopener noreferrer"
@@ -34,8 +34,8 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
     </Link>
     <Flex justifyContent="center">
       <Button
-        size="sm"
-        variant="secondary"
+        variant="primary"
+        startIcon={<LogoutIcon />}
         onClick={() => {
           logout();
           window.localStorage.removeItem(localStorageKey);
