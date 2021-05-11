@@ -33,7 +33,7 @@ export const lightColors: Colors = {
   cardBackground3: "#FFFFFF",
   secondaryButton: "#FFFFFF",
   footer: "#E46149",
-  menuHover: "#EFF4F5",
+  menuHover: "#EEEEEE",
 };
 
 export const darkColors: Colors = {
