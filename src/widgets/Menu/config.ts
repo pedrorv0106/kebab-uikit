@@ -10,8 +10,8 @@ export const links = [
     label: "Dashboard",
     icon: "DashboardIcon",
     href: "/dashboard",
-    color: "#404040",
-    backgroundColor: "#D9D9D9",
+    color: "#7A23BE",
+    backgroundColor: "#E4D3F2",
   },
   {
     label: "Trade",
