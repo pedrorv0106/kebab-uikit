@@ -10,7 +10,7 @@ it("renders correctly", () => {
         class="sc-gsTCUz hAeaPg"
       >
         <div
-          class="sc-bdfBwQ cXAyeg"
+          class="sc-bdfBwQ eqKxKy"
           style="width: 50%;"
         />
       </div>

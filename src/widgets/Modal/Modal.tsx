@@ -12,7 +12,7 @@ interface Props extends ModalProps {
 
 const StyledModal = styled.div`
   background: ${({ theme }) => theme.modal.background};
-  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 19px;
   width: 100%;

@@ -12,7 +12,7 @@ it("renders correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-jSgupP AtvHN"
+        class="sc-jSgupP ioIsXI"
       >
         <div
           class="sc-gKsewC kmFUwK"
@@ -25,7 +25,7 @@ it("renders correctly", () => {
           </h2>
           <button
             aria-label="Close the dialog"
-            class="sc-dlfnbm SzRdL sc-fubCfw cfMWLW"
+            class="sc-dlfnbm bhHeLQ sc-fubCfw cfMWLW"
           >
             <svg
               class="sc-eCssSg dcqeqW"

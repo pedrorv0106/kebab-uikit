@@ -9,7 +9,7 @@ it("renders ConnectModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-gKsewC gjfHlI"
+        class="sc-gKsewC ipXyJx"
       >
         <div
           class="sc-iBPRYJ chHAGi"
@@ -22,7 +22,7 @@ it("renders ConnectModal correctly", () => {
           </h2>
           <button
             aria-label="Close the dialog"
-            class="sc-eCssSg geTnbO sc-pFZIQ isofnp"
+            class="sc-eCssSg eRnJiJ sc-pFZIQ isofnp"
           >
             <svg
               class="sc-dlfnbm fVWA-dr"
@@ -41,7 +41,7 @@ it("renders ConnectModal correctly", () => {
           class="sc-jSgupP dcIvbh"
         >
           <button
-            class="sc-eCssSg cgLPex"
+            class="sc-eCssSg khjGgF"
             id="wallet-connect-metamask"
             style="justify-content: space-between;"
           >
@@ -183,7 +183,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-eCssSg cgLPex"
+            class="sc-eCssSg khjGgF"
             id="wallet-connect-trustwallet"
             style="justify-content: space-between;"
           >
@@ -226,7 +226,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-eCssSg cgLPex"
+            class="sc-eCssSg khjGgF"
             id="wallet-connect-mathwallet"
             style="justify-content: space-between;"
           >
@@ -258,7 +258,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-eCssSg cgLPex"
+            class="sc-eCssSg khjGgF"
             id="wallet-connect-tokenpocket"
             style="justify-content: space-between;"
           >
@@ -292,7 +292,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-eCssSg cgLPex"
+            class="sc-eCssSg khjGgF"
             id="wallet-connect-walletconnect"
             style="justify-content: space-between;"
           >
@@ -320,7 +320,7 @@ it("renders ConnectModal correctly", () => {
             </svg>
           </button>
           <button
-            class="sc-eCssSg hvVXHZ"
+            class="sc-eCssSg kmpwPJ"
             id="wallet-connect-binance chain wallet"
             style="justify-content: space-between;"
           >
@@ -414,7 +414,7 @@ it("renders AccountModal correctly", () => {
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       <div
-        class="sc-gKsewC gjfHlI"
+        class="sc-gKsewC ipXyJx"
       >
         <div
           class="sc-iBPRYJ chHAGi"
@@ -427,7 +427,7 @@ it("renders AccountModal correctly", () => {
           </h2>
           <button
             aria-label="Close the dialog"
-            class="sc-eCssSg geTnbO sc-pFZIQ isofnp"
+            class="sc-eCssSg eRnJiJ sc-pFZIQ isofnp"
           >
             <svg
               class="sc-dlfnbm fVWA-dr"
@@ -476,7 +476,7 @@ it("renders AccountModal correctly", () => {
             class="sc-jSgupP iPqHuD"
           >
             <button
-              class="sc-eCssSg iEIFIM"
+              class="sc-eCssSg gGckwg"
             >
               <svg
                 class="sc-dlfnbm kFGPWW"

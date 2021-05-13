@@ -36,22 +36,26 @@ export type Colors = {
   success: string;
   failure: string;
   warning: string;
+  info: string;
   contrast: string;
   invertedContrast: string;
   input: string;
   background: string;
   backgroundDisabled: string;
   text: string;
+  textDsc: string;
   textDisabled: string;
+  textInactive: string;
   textSubtle: string;
   borderColor: string;
   card: string;
   cardBackground1: string;
   cardBackground2: string;
-  cardBackground3: string;
-  secondaryButton: string;
   footer: string;
   menuHover: string;
+  divider: string;
+  switchButton: string;
+  switchButtonBackground: string;
 
   // Brand colors
   binance: string;

@@ -27,7 +27,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   width: 100%;
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.divider};
   z-index: 20;
   transform: translate3d(0, 0, 0);
 `;
