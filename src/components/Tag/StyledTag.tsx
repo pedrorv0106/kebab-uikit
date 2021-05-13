@@ -14,14 +14,14 @@ export const StyledTag = styled.div<ThemedProps>`
   background-color: ${({ outline, theme, variant = "primary" }) =>
     outline ? "transparent" : getColor(variant, theme)};
   border: 2px solid ${({ variant = "primary", theme }) => getColor(variant, theme)};
-  border-radius: 16px;
+  border-radius: 30px;
   color: ${getThemeTextColor};
   display: inline-flex;
+  font-family: GilroySemiBold;
   font-size: 14px;
-  font-weight: 400;
-  height: 28px;
+  height: 36px;
   line-height: 1.5;
-  padding: 0 8px;
+  padding: 8px 12px;
   white-space: nowrap;
 
   svg {

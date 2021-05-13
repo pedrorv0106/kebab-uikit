@@ -11,7 +11,7 @@ it("renders correctly", () => {
         class="sc-eCssSg sc-fubCfw cntkGK bbUrQL"
       >
         <div
-          class="sc-jSgupP htFAhM"
+          class="sc-jSgupP cbFYVq"
         >
           <svg
             class="sc-bdfBwQ bfCnsY"

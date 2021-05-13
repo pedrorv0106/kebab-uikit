@@ -18,11 +18,11 @@ export const light: ButtonTheme = {
     background: "transparent",
     backgroundActive: "transparent",
     backgroundHover: "transparent",
-    border: `2px solid ${lightColors.secondaryButton}`,
+    border: `2px solid ${lightColors.primary}`,
     borderColorHover: "none",
     boxShadow: "none",
     boxShadowActive: "none",
-    color: lightColors.secondaryButton,
+    color: lightColors.primary,
   },
   [TERTIARY]: {
     background: lightColors.tertiary,
@@ -82,8 +82,6 @@ export const dark: ButtonTheme = {
   },
   [SECONDARY]: {
     ...light.secondary,
-    border: `2px solid ${darkColors.secondaryButton}`,
-    color: darkColors.secondaryButton,
   },
   [TERTIARY]: {
     ...light.tertiary,

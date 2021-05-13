@@ -12,7 +12,7 @@ interface Props extends ModalProps {
 
 const StyledModal = styled.div`
   background: ${({ theme }) => theme.modal.background};
-  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 19px;
   width: 100%;
@@ -29,9 +29,9 @@ const ModalHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e9eaeb;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   align-items: center;
-  padding: 12px 24px;
+  padding: 15px 10px 0px 31px;
 `;
 const StyledHeading = styled(Heading)`
   font-size: 28px;
@@ -50,7 +50,7 @@ const Modal: React.FC<Props> = ({ title, onDismiss, children }) => (
         <CloseIcon color="primary" onClick={onDismiss} />
       </CloseButton>
     </ModalHeader>
-    <Flex flexDirection="column" p="24px">
+    <Flex flexDirection="column" p="31px 31px 38px 31px">
       {children}
     </Flex>
   </StyledModal>
