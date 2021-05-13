@@ -29,9 +29,9 @@ const ModalHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e9eaeb;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   align-items: center;
-  padding: 12px 24px;
+  padding: 15px 10px 0px 31px;
 `;
 const StyledHeading = styled(Heading)`
   font-size: 28px;
@@ -50,7 +50,7 @@ const Modal: React.FC<Props> = ({ title, onDismiss, children }) => (
         <CloseIcon color="primary" onClick={onDismiss} />
       </CloseButton>
     </ModalHeader>
-    <Flex flexDirection="column" p="24px">
+    <Flex flexDirection="column" p="31px 31px 38px 31px">
       {children}
     </Flex>
   </StyledModal>

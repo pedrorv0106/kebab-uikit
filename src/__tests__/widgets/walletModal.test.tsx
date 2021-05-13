@@ -12,7 +12,7 @@ it("renders ConnectModal correctly", () => {
         class="sc-gKsewC ipXyJx"
       >
         <div
-          class="sc-iBPRYJ chHAGi"
+          class="sc-iBPRYJ hPwkSP"
         >
           <h2
             class="sc-bdfBwQ sc-hKgILt sc-fubCfw kRxSMj ESJmc hDsjIp"
@@ -38,7 +38,7 @@ it("renders ConnectModal correctly", () => {
           </button>
         </div>
         <div
-          class="sc-jSgupP dcIvbh"
+          class="sc-jSgupP iWuhTy"
         >
           <button
             class="sc-eCssSg khjGgF"
@@ -417,7 +417,7 @@ it("renders AccountModal correctly", () => {
         class="sc-gKsewC ipXyJx"
       >
         <div
-          class="sc-iBPRYJ chHAGi"
+          class="sc-iBPRYJ hPwkSP"
         >
           <h2
             class="sc-bdfBwQ sc-hKgILt sc-fubCfw kRxSMj ESJmc hDsjIp"
@@ -443,7 +443,7 @@ it("renders AccountModal correctly", () => {
           </button>
         </div>
         <div
-          class="sc-jSgupP dcIvbh"
+          class="sc-jSgupP iWuhTy"
         >
           <div
             class="sc-bdfBwQ hxAzKK"

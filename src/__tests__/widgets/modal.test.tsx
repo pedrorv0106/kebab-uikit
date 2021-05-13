@@ -15,7 +15,7 @@ it("renders correctly", () => {
         class="sc-jSgupP ioIsXI"
       >
         <div
-          class="sc-gKsewC kmFUwK"
+          class="sc-gKsewC cjUylX"
         >
           <h2
             class="sc-bdfBwQ sc-gsTCUz sc-iBPRYJ kRxSMj djGkFV jsLZs"
@@ -41,7 +41,7 @@ it("renders correctly", () => {
           </button>
         </div>
         <div
-          class="sc-hKgILt kRvcbH"
+          class="sc-hKgILt chfjeY"
         >
           body
         </div>
