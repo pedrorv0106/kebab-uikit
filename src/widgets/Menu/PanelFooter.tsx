@@ -54,6 +54,22 @@ const SocialEntry = styled.div`
   padding: 0 16px;
 `;
 
+const StyledButton = styled(Button)`
+  background-color: ${({ theme }) => theme.colors.switchButtonBackground};
+  padding: 9px 12px;
+
+  &:hover:not(:disabled):not(:active) {
+    background-color: ${({ theme }) => theme.colors.switchButtonBackground};
+  }
+  &:active {
+    background-color: ${({ theme }) => theme.colors.switchButtonBackground};
+  }
+`;
+
+const ModeButton = styled(Button)`
+  padding: 0;
+`;
+
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
@@ -83,8 +99,8 @@ const PanelFooter: React.FC<Props> = ({
             href="https://info.kebabfinance.com/#/token/0x7979f6c54eba05e18ded44c4f986f49a5de551c2"
             target="_blank"
           >
-            {priceUp ? <PancakeRoundGreenIcon width="24px" mr="8px" /> : <PancakeRoundIcon width="24px" mr="8px" />}
-            <Text color="footer" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+            {priceUp ? <PancakeRoundGreenIcon width="32px" mr="12px" /> : <PancakeRoundIcon width="32px" mr="12px" />}
+            <Text color="footer" fontSize="20px" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
           </PriceLink>
         ) : (
           <Skeleton width={80} height={24} />
@@ -92,11 +108,11 @@ const PanelFooter: React.FC<Props> = ({
         <Dropdown
           position="top-right"
           target={
-            <Button variant="text" startIcon={<LanguageIcon color="footer" width="24px" />}>
+            <StyledButton size="sm" startIcon={<LanguageIcon color="footer" width="18px" />}>
               <Text color="footer" bold>
                 {currentLang?.toUpperCase()}
               </Text>
-            </Button>
+            </StyledButton>
           }
         >
           {langs.map((lang) => (
@@ -120,7 +136,7 @@ const PanelFooter: React.FC<Props> = ({
             const mr = index < socials.length - 1 ? "24px" : 0;
             if (social.items) {
               return (
-                <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
+                <Dropdown key={social.label} position="top-right" target={<Icon {...iconProps} mr={mr} />}>
                   {social.items.map((item) => (
                     <Link external key={item.label} href={item.href} aria-label={item.label} color="footer">
                       {item.label}
@@ -136,7 +152,7 @@ const PanelFooter: React.FC<Props> = ({
             );
           })}
         </Flex>
-        <Button variant="text" onClick={() => toggleTheme(!isDark)}>
+        <ModeButton variant="text" onClick={() => toggleTheme(!isDark)}>
           {/* alignItems center is a Safari fix */}
           <Flex alignItems="center">
             <SunIcon color="text" width="24px" />
@@ -145,7 +161,7 @@ const PanelFooter: React.FC<Props> = ({
             </Text>
             <MoonIcon color="primary" width="24px" />
           </Flex>
-        </Button>
+        </ModeButton>
       </SettingsEntry>
     </Container>
   );
