@@ -23,6 +23,7 @@ export const lightColors: Colors = {
   contrast: "#191326",
   invertedContrast: "#FFFFFF",
   input: "#F7D0C9",
+  currencyInput: "#FCF0ED",
   tertiary: "#FFFFFF",
   text: "#23001E",
   textDsc: "#F7D0C9",
@@ -30,6 +31,7 @@ export const lightColors: Colors = {
   textInactive: "#BDC2C4",
   textSubtle: "#404040",
   borderColor: "#E9EAEB",
+  currencyInputBorder: "#EC9383",
   card: "#FFFFFF",
   cardBackground1: "#E46149",
   cardBackground2: "#EDF1F3",
@@ -38,6 +40,7 @@ export const lightColors: Colors = {
   divider: "#EEEEEE",
   switchButton: "#E46149",
   switchButtonBackground: "#FAE0DC",
+  currencySelectBackground: "#FAE0DC",
 };
 
 export const darkColors: Colors = {
@@ -48,6 +51,7 @@ export const darkColors: Colors = {
   contrast: "#FFFFFF",
   invertedContrast: "#191326",
   input: "#2F3142",
+  currencyInput: "#2F3142",
   primaryDark: "#0098A1",
   tertiary: "#353547",
   text: "#FFFFFF",
@@ -56,6 +60,7 @@ export const darkColors: Colors = {
   textInactive: "#92939B",
   textSubtle: "#FFFFFF",
   borderColor: "#524B63",
+  currencyInputBorder: "#E46149",
   card: "#252836",
   cardBackground1: "#252836",
   cardBackground2: "#252836",
@@ -64,4 +69,5 @@ export const darkColors: Colors = {
   divider: "#323542",
   switchButton: "#FFFFFF",
   switchButtonBackground: "#2F3142",
+  currencySelectBackground: "#92939B",
 };

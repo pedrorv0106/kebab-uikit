@@ -40,6 +40,7 @@ export type Colors = {
   contrast: string;
   invertedContrast: string;
   input: string;
+  currencyInput: string;
   background: string;
   backgroundDisabled: string;
   text: string;
@@ -48,6 +49,7 @@ export type Colors = {
   textInactive: string;
   textSubtle: string;
   borderColor: string;
+  currencyInputBorder: string;
   card: string;
   cardBackground1: string;
   cardBackground2: string;
@@ -56,6 +58,7 @@ export type Colors = {
   divider: string;
   switchButton: string;
   switchButtonBackground: string;
+  currencySelectBackground: string;
 
   // Brand colors
   binance: string;
