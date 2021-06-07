@@ -44,6 +44,7 @@ export type Colors = {
   background: string;
   backgroundDisabled: string;
   text: string;
+  kslvText: string;
   textDsc: string;
   textDisabled: string;
   textInactive: string;
@@ -53,6 +54,7 @@ export type Colors = {
   card: string;
   cardBackground1: string;
   cardBackground2: string;
+  cardBackground3: string;
   footer: string;
   menuHover: string;
   divider: string;
