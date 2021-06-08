@@ -44,6 +44,13 @@ export const links = [
     backgroundColor: "#FDE9D1",
   },
   {
+    label: "KSLV",
+    icon: "KSLVIcon",
+    href: "/kslv",
+    color: "#7C7C7C",
+    backgroundColor: "#E5E5E5",
+  },
+  {
     label: "Info",
     icon: "InfoIcon",
     items: [
